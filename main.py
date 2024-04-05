@@ -1,8 +1,6 @@
 from random import choice
 
-# word = ['apple', 'orange', 'pineapple', 'watermelon', 'melon', 'grape']
-word = ['pineapple']
-
+word = ['apple', 'orange', 'pineapple', 'watermelon', 'melon', 'grape']
 choice = choice(word)
 
 
@@ -23,6 +21,7 @@ def game(word: str, attempts: int):
                 if guess_letter == letter:
                     secret_word[index] = letter
                     win_word = ''.join(secret_word)
+                    print('Ця літера є')
             print(win_word)
             if '*' not in secret_word:
                 print('Вгадали')
@@ -31,10 +30,6 @@ def game(word: str, attempts: int):
             print('Цієї літери нема')
         attempts -= 1
 
+
 attempts = int(input('Скільки буде спроб: '))
 game(choice, attempts)
-
-
-
-
-
